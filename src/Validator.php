@@ -154,7 +154,7 @@ class Validator implements ValidatorInterface
      * {@inheritDoc}
      * @see \InShore\Bookwhen\Interfaces\ValidatorInterface::validFrom()
      */
-    public function validFrom(string $from, string $to = null): bool
+    public function validFrom(string $from, ?string $to = null): bool
     {
         if (!$this->validDate($from)) {
             return false;

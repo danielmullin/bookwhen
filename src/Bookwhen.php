@@ -76,9 +76,9 @@ final class Bookwhen implements BookwhenInterface
      * @todo logging
      */
     public function __construct(
-        string $apiKey = null,
-        Client $client = null,
-        private $validator = new Validator()
+        ?string $apiKey = null,
+        ?Client $client = null,
+        private Validator $validator = new Validator()
     ) {
         //         $this->logFile = $logFile;
         //         $this->logLevel = $logLevel;
@@ -149,9 +149,9 @@ final class Bookwhen implements BookwhenInterface
      * @see \InShore\Bookwhen\Interfaces\BookwhenInterface::attachment()
      */
     public function attachments(
-        string $title = null,
-        string $fileName = null,
-        string $fileType = null
+        ?string $title = null,
+        ?string $fileName = null,
+        ?string $fileType = null
     ): array {
 
         $this->addFilter('title', $title, 'validTitle');
